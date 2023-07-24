@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="boostrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+	<title>Variable Scope</title>
+</head>
+<body>
+     
+
+  <button onclick="alert(fname)">Use Me</button>
+
+
+
+      <script type="text/javascript">
+      	  
+      	  var fname="i love abimbola"; //this is a global scope variable bcus it can be accessed anywhere
+
+       function getName() {
+           var lname="Tinuke" //this is local variable
+           //alert(fname);
+       }
+      </script>
+</body>
+</html>

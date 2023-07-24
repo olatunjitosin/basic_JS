@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="fontawesome/css/all.css" rel="stylesheet" type="text/css"/>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"/>
+	<title>Birthday Invitation</title>
+</head>
+<body>
+   <div class="container">
+		<h1 class="btn btn-success">Birthday Invitation</h1>
+		<p>Please RSVP by filling in the form below:</p>
+		<form>
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" class="form-control" id="name" name="name" required>
+			</div>
+			<div class="form-group">
+				<label for="gift">Gender</label>
+				  <select class="form-control" id="gift" name="gift">
+					<option value="">Select Gender</option>
+					<option value="Male">Male</option>
+					<option value="Female">Female</option>
+				 </select>
+			</div>
+			<div class="form-group">
+				<label for="email">Email:</label>
+				<input type="email" class="form-control" id="email" name="email" required>
+			</div>
+			<div class="form-group">
+				<label for="phone">Phone:</label>
+				<input type="tel" class="form-control" id="phone" name="phone" required>
+			</div>
+			<div class="form-group">
+				<label for="location">Location:</label>
+				<input type="text" class="form-control" id="location" name="location" required>
+			</div>
+			<div class="form-group">
+				<label for="gift">Gift(s):</label>
+				<select class="form-control" id="gift" name="gift">
+					<option value="">Select a gift</option>
+					<option value="Car">Car</option>
+					<option value="Blender">Blender</option>
+					<option value="Shoe">Shoe</option>
+					<option value="Cloth">Cloth</option>
+					<option value="Cash">Cash</option>
+					<option value="Others">Others</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="message">Message:</label>
+				<textarea class="form-control" id="message" name="message" rows="3"></textarea>
+			</div>
+			<button type="submit" class="btn btn-primary">THANKS!</button>
+		</form>
+	</div>
+<script src="script/scriptss.js" type="text/javascript"></script>
+</body>
+</html>

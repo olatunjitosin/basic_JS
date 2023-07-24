@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>grade</title>
+
+	 <style type="text/css">
+	 	  div{
+	 	  	margin:20px;
+	 	  }
+
+	 </style>
+</head>
+<body>
+     <h1> Grade Calculator</h1>
+       <!--english-->
+       <div>
+       <label for="eng">English</label>
+       <input type="number" id="eng" placeholder="enter score" onchange="engCalc()">
+       <input type="text" id="eng_grade" disabled>
+      </div>
+      <div>
+      	<!--maths-->
+      	<div>
+       <label for="math">maths</label>
+       <input type="number" id="math" placeholder="enter score" onchange="mathCalc()">
+       <input type="text" name="mat_grade" id="math_grade" disabled>
+      </div>
+      <!--chem-->
+      <div>
+       <label for="chem">chemistry</label>
+       <input type="number" name="chm_grade" id="chem" placeholder="enter score" onchange="chemCalc()">
+       <input type="text" name="chem_grade" id="chm_grade" disabled>
+      </div>
+        <!--biology-->
+      <div>
+       <label for="bio">biology</label>
+       <input type="number" id="bio" placeholder="enter score" onchange="bioCalc()">
+       <input type="text" name="bioo_grade" id="bio_grade" disabled>
+      </div>
+       <!--french-->
+      <div>
+       <label for="fre">french</label>
+       <input type="number" id="fre" placeholder="enter score" onchange="freCalc()">
+       <input type="text" name="fren_grade" id="fre_grade" disabled>
+      </div>
+   <div> 
+   	     <button onclick="summaryGen()">Get result</button>
+   </div>
+   <div>  
+     	<h1>Total:</h1> 
+   </div>
+   <div>  
+     	<h1>Average:<span id="average"></span></h1> 
+   </div>
+ <div>  
+     	<h1>Remarks: <span id="remark"></span></h1> 
+   </div>
+                   
+
+     <script type="text/javascript">
+     	//this function calculates grades for english
+          function engCalc(){
+         var engScore=  document.getElementById('eng').value;
+          	   if(engScore < 40 ){
+         document.getElementById('eng_grade').value="F"
+          	   	 
+         }else if((engScore>=40) && (engScore<45)){
+            document.getElementById('eng_grade').value="E"
+         }else if((engScore>=45) && (engScore<50)){
+         	document.getElementById('eng_grade').value="D"
+         }else if((engScore>=50) && (engScore<60)){
+         	document.getElementById('eng_grade').value="C"
+         
+         }else if((engScore>=60) && (engScore<69)){
+         	document.getElementById('eng_grade').value="B"
+         
+         }else {
+         	document.getElementById('eng_grade').value="A"
+         }
+     }
+
+
+           
+                  // function gradeCalculator(score,inputId){
+
+
+                  // }
+
+     //this is what ti use for assihnent   if (eng==""){
+
+        	//alert("please enter a score for english")
+       // } else if(math==""){
+       //alert("please enter a score for english")
+
+       // }
+
+
+         function mathCalc(){
+           var score=document.getElementById('math').value
+               if(score < 40 ){
+         document.getElementById('math_grade').value="F"
+          	   	 
+         }else if((score>=40) && (score<45)){
+            document.getElementById('math_grade').value="E"
+         }else if((score>=45) && (score<50)){
+         	document.getElementById('math_grade').value="D"
+         }else if((score>=50) && (score<60)){
+         	document.getElementById('math_grade').value="C"
+         
+         }else if((score>=60) && (score<69)){
+         	document.getElementById('math_grade').value="B"
+         
+
+         }else {
+         	document.getElementById('math_grade').value="A"
+         }
+     }
+
+     function chemCalc(){
+           var score=document.getElementById('chm_grade').value
+               if(score < 40 ){
+         document.getElementById('chm_grade').value="F"
+          	   	 
+         }else if((score>=40) && (score<45)){
+            document.getElementById('chm_grade').value="E"
+         }else if((score>=45) && (score<50)){
+         	document.getElementById('chm_grade').value="D"
+         }else if((score>=50) && (score<60)){
+         	document.getElementById('chm_grade').value="C"
+         
+         }else if((score>=60) && (score<69)){
+         	document.getElementById('chm_grade').value="B"
+         
+
+         }else {
+         	document.getElementById('chm_grade').value="A"
+         }
+     }
+
+
+      function bioCalc(){
+           var score=document.getElementById('bio_grade').value
+               if(score < 40 ){
+         document.getElementById('bio_grade').value="F"
+          	   	 
+         }else if((score>=40) && (score<45)){
+            document.getElementById('bio_grade').value="E"
+         }else if((score>=45) && (score<50)){
+         	document.getElementById('bio_grade').value="D"
+         }else if((score>=50) && (score<60)){
+         	document.getElementById('bio_grade').value="C"
+         
+         }else if((score>=60) && (score<69)){
+         	document.getElementById('bio_grade').value="B"
+         
+
+         }else {
+         	document.getElementById('bio_grade').value="A"
+         }
+     }
+
+
+         function freCalc(){
+           var score=document.getElementById('fren_grade').value
+               if(score < 40 ){
+         document.getElementById('fren_grade').value="F"
+          	   	 
+         }else if((score>=40) && (score<45)){
+            document.getElementById('fren_grade').value="E"
+         }else if((score>=45) && (score<50)){
+         	document.getElementById('fren_grade').value="D"
+         }else if((score>=50) && (score<60)){
+         	document.getElementById('fren_grade').value="C"
+         
+         }else if((score>=60) && (score<69)){
+         	document.getElementById('fren_grade').value="B"
+         
+
+         }else {
+         	document.getElementById('fren_grade').value="A"
+         }
+     }
+         
+         //function to calculate total and average
+  function summaryGen(){
+       var eng=document.getElementById('eng').value;
+       var math=document.getElementById('math').value;
+       var chem=document.getElementById('chem').value;
+       var bio=document.getElementById('bio').value;
+       var fren=document.getElementById('fre').value;
+
+   var totalScore=Number(eng)+Number(math)+Number(chem)+Number(bio)+Number(fren);
+   document.getElementById('totalscore').innerHTML=totalScore;
+   var average = totalScore / 5;
+   document.getElementById('totalscore').innerHTML=average;
+   if(average > 50){
+       document.getElementById('remark').innerHTML="you passed!!!"
+   }else{
+
+   	  document.getElementById('remark').innerHTML="you failed!!!"
+  }
+     </script>
+  
+
+
+</body>
+</html>
